@@ -1,0 +1,31 @@
+$nav-color: lightgray;
+
+$size-0: 0;
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 1rem;
+$size-4: 1.5rem;
+$size-5: 3rem;
+$size-auto: auto;
+
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+
+nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+
+    max-width: 900px;
+    margin: $size-auto;
+    background-color: $nav-color;
+    
+    ul {
+        list-style: none;
+        display: flex;
+        li{
+            padding-left: $size-2;
+        
+    }
+  }
+}

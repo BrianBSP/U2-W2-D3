@@ -1,0 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  background-color: lightgray;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding-left: 0.5rem;
+}/*# sourceMappingURL=stile.css.map */
