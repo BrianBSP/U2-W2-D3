@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -7,7 +9,7 @@ nav {
   display: flex;
   max-width: 900px;
   margin: auto;
-  background-color: lightgray;
+  background-color: #a763f6;
 }
 nav ul {
   list-style: none;
@@ -15,4 +17,82 @@ nav ul {
 }
 nav ul li {
   padding-left: 0.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(36, 5, 45);
+}
+
+header {
+  margin-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    text-align: initial;
+  }
+  header .img-box img {
+    max-width: 650px;
+  }
+}
+header .hero .container {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  background-color: #640fc5;
+  margin: auto;
+  align-items: center;
+  color: #f4f4f4;
+}
+header .hero .container .info-box {
+  text-align: center;
+}
+header .hero .info-box {
+  /* .btn {
+    padding: $size-1 $size-2;
+    border: 1px solid transparent;
+    background-color: transparent;
+    &:hover {
+      padding-left: 2px;
+      box-shadow: 3px 3px 10px 2px #939393;
+    }
+  } */
+}
+header .hero .info-box h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header .hero .info-box p {
+  font-family: Georgia, serif;
+}
+header .hero .info-box .button-3, header .hero .info-box .button-2, header .hero .info-box .button-1 {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+header .hero .info-box .button-3:hover, header .hero .info-box .button-2:hover, header .hero .info-box .button-1:hover {
+  padding-left: 2px;
+  box-shadow: 3px 3px 10px 2px #484343;
+  cursor: pointer;
+}
+header .hero .info-box .button-1 {
+  background-color: #0e6cff;
+  border-color: #003487;
+  color: #001536;
+}
+header .hero .info-box .button-2 {
+  background-color: #ff8700;
+  border-color: #804400;
+  color: #001536;
+}
+header .hero .info-box .button-3 {
+  background-color: #4caf50;
+  border-color: #265828;
+  color: #001536;
+}
+header .hero .img-box img {
+  max-width: 250px;
+  border-radius: 6px;
+  align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=stile.css.map */

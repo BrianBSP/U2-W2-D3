@@ -1,4 +1,9 @@
-$nav-color: lightgray;
+$nav-color: #a763f6;
+$txt-color: #f4f4f4;
+$btn-1: #0e6cff;
+$btn-2: #ff8700;
+$btn-3: #4caf50;
+$bg-hero: #640fc5;
 
 $size-0: 0;
 $size-1: 0.25rem;
@@ -8,24 +13,109 @@ $size-4: 1.5rem;
 $size-5: 3rem;
 $size-auto: auto;
 
-*,*::before,*::after{
-    box-sizing:border-box;
+$sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$serif: Georgia, serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 nav {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
+  font-family: $sans-serif;
+  display: flex;
 
-    max-width: 900px;
-    margin: $size-auto;
-    background-color: $nav-color;
-    
-    ul {
-        list-style: none;
-        display: flex;
-        li{
-            padding-left: $size-2;
-        
+  max-width: 900px;
+  margin: $size-auto;
+  background-color: $nav-color;
+
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      padding-left: $size-2;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(36, 5, 45);
+      }
+    }
+  }
+}
+header {
+  margin-top: 5px;
+  @media screen and (min-width: 768px) {
+    text-align: initial;
+    .img-box img {
+      max-width: 650px;
+    }
+  }
+  .hero {
+    .container {
+      display: flex;
+      justify-content: center;
+      max-width: 900px;
+      background-color: $bg-hero;
+      margin: $size-auto;
+      align-items: center;
+      color: $txt-color;
+      .info-box {
+        text-align: center;
+      }
+    }
+    .info-box {
+      h1 {
+        font-family: $sans-serif;
+      }
+      p {
+        font-family: $serif;
+      }
+      /* .btn {
+        padding: $size-1 $size-2;
+        border: 1px solid transparent;
+        background-color: transparent;
+        &:hover {
+          padding-left: 2px;
+          box-shadow: 3px 3px 10px 2px #939393;
+        }
+      } */
+      %main-btn {
+        padding: $size-1 $size-2;
+        border: 2px solid black;
+        border-radius: 10px;
+        &:hover {
+          padding-left: 2px;
+          box-shadow: 3px 3px 10px 2px #484343;
+          cursor: pointer;
+        }
+      }
+      .button-1 {
+        @extend %main-btn;
+        background-color: $btn-1;
+        border-color: scale-color($btn-1, $lightness: -50%);
+        color: scale-color($btn-1, $lightness: -80%);
+      }
+      .button-2 {
+        @extend %main-btn;
+        background-color: $btn-2;
+        border-color: scale-color($btn-2, $lightness: -50%);
+        color: scale-color($btn-1, $lightness: -80%);
+      }
+      .button-3 {
+        @extend %main-btn;
+        background-color: $btn-3;
+        border-color: scale-color($btn-3, $lightness: -50%);
+        color: scale-color($btn-1, $lightness: -80%);
+      }
+    }
+    .img-box {
+      img {
+        max-width: 250px;
+        border-radius: 6px;
+        align-items: center;
+        object-fit: cover;
+      }
     }
   }
 }
